@@ -1,0 +1,72 @@
+.container {
+  background-color: var(--form-bgd-color);
+  border-radius: 10px;
+  padding: 5%;
+}
+
+.estimateTitle {
+  color: var(--estimate-title-color);
+  font-size: 1.6rem;
+  margin-bottom: 10%;
+}
+
+.services-select {
+  margin-bottom: 5rem;
+}
+
+.input {
+  margin: 2% 0 3% 0;
+  font-size: 0.9rem;
+  width: 100%;
+  padding: 2%;
+}
+
+.serviceOption {
+  padding-bottom: 2%;
+}
+
+.serviceSelect {
+  margin: 2% 0;
+}
+
+.submitBtn {
+  margin-top: 7%;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: var(--estimate-submit-text-color);
+  background-color: var(--estimate-submit-bgd-color);
+  padding: 1% 5%;
+}
+
+/* Form style1 */
+
+.style1 {
+  box-shadow: var(--shadow);
+}
+
+/* form style2 */
+
+.style2 .estimateTitle {
+  border-bottom: 1px solid black;
+  padding-bottom: 2%;
+}
+
+.style2 fieldset {
+  display: grid;
+  grid-template-columns: 40% auto;
+}
+
+.style2 .input {
+  border: 1px solid #E3E3E3;
+}
+
+.style2 .submitBtn {
+  width: 100%;
+  padding: 2% 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .style2 .commentFieldset {
+    display: block;
+  }
+}

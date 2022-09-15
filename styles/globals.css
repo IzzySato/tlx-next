@@ -1,0 +1,74 @@
+/* 
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+:root {
+  --bgd-color: #F7F1E9;
+  --font-black-color: #2B2926;
+  --font-white-color: #F7F7F7;
+  --home-accent-box: #354935;
+  --nav-bgd-color: #463B2B;
+  --mobile-menu-color: #cecece;
+  --nav-mobile-hover: #30281d;
+  --footer-bgd-color: #262018;
+  --btn-bgd-color: #354935;
+  --btn-hover: #1d281d;
+  --sucsess-color: #498449;
+  --error-color: #de8282(215, 113, 113);
+  --shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+} */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--bgd-color);
+  font-family: var(--font-family);
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+  border-radius: 6px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.wrapper {
+  padding: 13% 5% 0% 5%;
+}
+
+.keen-slider__slide {
+  transition: all 0.5s ease-out;
+}

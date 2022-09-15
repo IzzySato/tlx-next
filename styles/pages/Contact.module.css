@@ -1,0 +1,86 @@
+.container {
+  padding: 5% 0 10% 0;
+  background-color: var(--contact-bgd-color);
+  color: var(--contact-default-font-color);
+}
+
+.contactImg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.4;
+  height: 280px;
+  width: 100%;
+}
+
+.title {
+  text-transform: uppercase;
+  padding-bottom: 2%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 3% auto 0 auto;
+  text-align: center;
+  padding: 10% 5% 0 5%;
+  font-size: 4rem;
+  color: var(--contact-title-color);
+}
+
+.gridDiv {
+  display: grid;
+  grid-template-columns: 30% auto;
+  gap: 5%;
+  padding: 0 10%;
+}
+
+.businessInfoContainer {
+  width: 60%;
+  padding: 4% 2%;
+  margin: 0 auto;
+}
+
+.estimateDiv {
+  width: 60%;
+  margin: 5% auto 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .businessInfoContainer {
+    width: 80%;
+  }
+  
+  .estimateDiv {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .contactImg {
+    height: 190px;
+  }
+  
+  .businessInfoContainer {
+    width: 90%;
+  }
+
+  .gridDiv {
+    display: block;
+    text-align: center;
+    padding: 0;
+  }
+
+  .estimateDiv {
+    width: 90%;
+  }
+
+  .title {
+    padding-top: 13%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .title {
+    padding-top: 22%;
+    font-size: 3rem;
+  }
+}

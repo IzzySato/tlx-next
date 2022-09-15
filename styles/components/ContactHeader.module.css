@@ -1,0 +1,61 @@
+.container {
+  background-color: var(--contact-header-bgd-color);
+  display: grid;
+  grid-template-columns: 30% 30% auto;
+  text-align: center;
+  padding: 1.3% 5%;
+  width: 100%;
+  position: fixed;
+  z-index: 5;
+}
+
+.container .info {
+  font-size: 1.1rem;
+}
+
+.info {
+  padding-right: 5%;
+}
+
+.infoAnchor {
+  display: flex;
+}
+
+.infoAnchor .icon {
+  align-self: flex-end;
+}
+
+.icon {
+  font-size: 1.6rem;
+  margin-right: 5%;
+}
+
+.companyName {
+  color: var(--contact-header-biz-name-color);
+}
+
+.phoneIcon {
+  color: var(--contact-header-phone-icon--color);
+}
+
+.phoneText {
+  color: var(--contact-header-phone-color);
+}
+
+.emailIcon {
+  color: var(--contact-header-email-icon-color);
+}
+
+.emailText {
+  color: var(--contact-header-email-color);
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .companyName {
+    display: none;
+  }
+}

@@ -1,0 +1,36 @@
+.container {
+  background-color: var(--service-bgd-color);
+  color: var(--service-default-font-color);
+  padding: 15% 5% 10% 5%;
+}
+
+.serviceTitle {
+  color: var(--service-title-color);
+  margin-bottom: 5%;
+  font-size: 2.7rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.serviceWithImgDiv {
+  margin-bottom: 13%;
+}
+
+.serviceListDiv {
+  margin-bottom: 13%;
+}
+
+.estimateDiv {
+  width: 75%;
+  margin: 5% auto 0 auto;
+}
+
+@media screen and (max-width: 900px) {
+  .serviceDiv {
+    padding-top: 10%;
+  }
+
+  .estimateDiv {
+    width: 95%;
+  }
+}

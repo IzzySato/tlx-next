@@ -1,0 +1,165 @@
+.footer {
+  background-color: var(--footer-bgd-color);
+  padding: 5% 2% 2% 2%;
+}
+
+.gridDiv {
+  display: grid;
+  grid-gap: 2%;
+  grid-template-columns: 25% 30% auto;
+  grid-template-areas: 
+  "logo info credentials";
+}
+
+.infoDiv {
+  display: grid;
+  grid-area: info;
+}
+
+.logoNameDiv {
+  grid-area: logo;
+  display: flex;
+  flex-direction: column;
+}
+
+.logoImg {
+  width: 90%
+}
+
+.credentials {
+  grid-area: credentials;
+  color: var(--credential-color);
+}
+
+.credentials p {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+/* style1 (logo included business name) */
+
+.style1 .nameDiv {
+  display: none;
+}
+
+/* style2 (logo does not included business name) */
+
+.style2 .nameDiv {
+  margin-bottom: 2rem;
+}
+
+.addressIcon {
+  color: var(--footer-address-icon-color);
+}
+
+.infoAnchor, .address, .companyName {
+  font-size: 1.5rem;
+}
+
+.address {
+  color: var(--footer-address-color);
+  line-height: 40px;
+  margin-right: 1rem;
+}
+
+.companyName {
+  color: var(--footer-company-color);
+}
+
+.emailIcon {
+  color: var(--footer-email-icon-color);
+}
+
+.email {
+  color: var(--footer-email-color);
+}
+
+.phoneIcon {
+  color: var(--footer-phone-icon-color);
+}
+
+.phone {
+  color: var(--footer-phone-color);
+}
+
+.icon {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+
+  .gridDiv {
+    grid-template-columns: 30% auto;
+    grid-template-areas: 
+    "logo info"
+    "credentials credentials";
+  }
+
+  .credentials {
+    margin-top: 3%;
+  }
+
+  .break {
+    display: block;
+  }
+
+  .infoDiv {
+    row-gap: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 990px) {
+
+  .addressDiv, .infoAnchor {
+    display: grid;
+    grid-template-columns: 12% auto;
+  }
+  
+  .icon {
+    display: block;
+    font-size: 1.4rem;
+    margin-right: 8%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+
+  .gridDiv {
+    grid-template-columns: 100%;
+    padding: 4% 1% 7% 1%;
+    grid-gap: 1%;
+    grid-template-areas: 
+    "logo"
+    "info"
+    "credentials";
+  }
+
+  .credentials {
+    margin-top: 5%;
+  }
+
+  .logoDiv {
+    margin-bottom: 2%;
+  }
+
+  .logoImg {
+    width: 30%;
+    margin-left: 12%;
+  }
+
+  .phoneDiv {
+    margin-top: 5%;
+  }
+
+  .phoneDiv, .emailDiv, .addressDiv, .credentials {
+    margin-left: 12%;
+  }
+
+  .infoAnchor, .address, .companyName {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+}

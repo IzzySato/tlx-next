@@ -1,0 +1,52 @@
+.wrapper {
+  padding-top: 10%;
+  height: 100vh;
+}
+
+.msgDiv {
+  border-radius: 10px;
+  padding: 9% 10%;
+  margin: 5% 10%;
+  display: grid;
+  grid-template-columns: 40% auto;
+  grid-gap: 5%;
+  justify-content: center;
+  align-items: center;
+}
+
+.msg {
+  margin: 0 0 5% 0;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: var(--font-white-color);
+}
+
+.success {
+  background-color: var(--sucsess-color);
+}
+
+.error {
+  background-color: var(--error-color);
+}
+
+.msgBtn {
+  text-decoration: underline;
+  color: var(--message-back-btn-color);
+}
+
+@media screen and (max-width: 990px) {
+  .wrapper {
+    padding-top: 20%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .msgDiv {
+    grid-template-columns: 100%;
+  }
+
+  .imgContainer {
+    margin: 0 auto;
+    width: 50%;
+  }
+}

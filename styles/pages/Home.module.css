@@ -1,0 +1,72 @@
+.container {
+  background-color: var(--home-bgd-color);
+  color: var(--home-default-font-color);
+  max-width: 1170px;
+  margin: auto;
+}
+
+.businessInfoContainer {
+  padding: 3% 0 6% 1%;
+  top: 25%;
+  background-color: var(--home-accent-box);
+  color: var(--home-business-font-color);
+  position: absolute;
+  width: 65%;
+}
+
+.serviceDiv {
+  margin: 6% 5%;
+}
+
+.imgContainer {
+  height: 800px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.serviceTitle {
+  margin: 4% 0 7% 0;
+  color: var(--home-title);
+  text-transform: uppercase;
+  font-size: 2.3rem;
+}
+
+.serviceWithImgDiv {
+  margin-bottom: 16%;
+}
+
+.serviceListDiv {
+  margin-bottom: 16%;
+}
+
+.estimateDiv {
+  padding: 5% 0%;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.testimonialDiv {
+  margin: 0 5%;
+}
+
+@media screen and (max-width: 1200px) {
+  .businessInfoContainer {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .businessInfoContainer {
+    padding: 16% 0 9% 1%;
+    position: static;
+    margin-bottom: 10%;
+  }
+
+  .imgContainer {
+    display: none;
+  }
+
+  .estimateDiv {
+    width: 90%;
+  }
+}

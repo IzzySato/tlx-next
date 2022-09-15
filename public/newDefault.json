@@ -1,0 +1,389 @@
+[
+  {
+    "title": "Page Font",
+    "description": "Google font @import",
+    "global": true,
+    "_type": "pageFont",
+    "fontInfo": [
+      {
+        "title": "Roboto Regular",
+        "rel": "preconnect",
+        "href": "https://fonts.googleapis.com"
+      },
+      {
+        "title": "Roboto Bold",
+        "rel": "stylesheet",
+        "href": "https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      },
+      {
+        "title": "Roboto",
+        "rel": "preconnect",
+        "href": "https://fonts.gstatic.com"
+      }
+    ],
+    "styles": [
+      {
+        "title": "Font family",
+        "description": "Google font CSS rules to specify families",
+        "rootKey": "--font-family",
+        "data": "'Roboto', sans-serif"
+      }
+    ]
+  },
+  {
+    "title": "Navigation",
+    "description": "navigation --root values CSS",
+    "global": true,
+    "_type": "nav",
+    "styles": [
+      {
+        "title": "Navigation background color",
+        "description": "Navigation background color",
+        "rootKey": "--nav-bgd-color",
+        "data": "#463B2B"
+      },
+      {
+        "title": "Navigation text color",
+        "description": "Navigation text color",
+        "rootKey": "--nav-text-color",
+        "data": "#F1F1F1"
+      },
+      {
+        "title": "Mobile menu color",
+        "description": "Mobile navigation menu color",
+        "rootKey": "--mobile-menu-color",
+        "data": "#cecece"
+      },
+      {
+        "title": "Mobile hover color",
+        "description": "Mobile navigation hover color",
+        "rootKey": "--nav-mobile-hover",
+        "data": "#30281d"
+      }
+    ]
+  },
+  {
+    "title": "Footer",
+    "description": "Footer --root values CSS",
+    "global": true,
+    "_type": "footer",
+    "styles": [
+      {
+        "title": "Footer background color",
+        "description": "Footer background color",
+        "rootKey": "--footer-bgd-color",
+        "data": "#262018"
+      },
+      {
+        "title": "Footer company name color",
+        "description": "Footer company name text color",
+        "rootKey": "--footer-company-color",
+        "data": "#F1F1F1"
+      },
+      {
+        "title": "Footer address icon color",
+        "description": "Footer address icon color",
+        "rootKey": "--footer-address-icon-color",
+        "data": "#F1F1F1"
+      },
+      {
+        "title": "Footer address color",
+        "description": "Footer address font color",
+        "rootKey": "--footer-address-color",
+        "data": "#F1F1F1"
+      },
+      {
+        "title": "Footer email color",
+        "description": "Footer email font color",
+        "rootKey": "--footer-email-color",
+        "data": "#F1F1F1"
+      },
+      {
+        "title": "Footer email icon color",
+        "description": "Footer email icon color",
+        "rootKey": "--footer-email-icon-color",
+        "data": "#F1F1F1"
+      },
+      {
+        "title": "Footer phone icon color",
+        "description": "Footer phone icon color",
+        "rootKey": "--footer-phone-icon-color",
+        "data": "#F1F1F1"
+      },
+      {
+        "title": "Footer phone color",
+        "description": "Footer phone font color",
+        "rootKey": "--footer-phone-color",
+        "data": "#F1F1F1"
+      }
+    ]
+  },
+  {
+    "title": "Estimate Today!",
+    "description": "Estimate --root values CSS",
+    "global": true,
+    "_type": "estimate",
+    "styles": [
+      {
+        "title": "Estimate Form background color",
+        "description": "Estimate form background color",
+        "rootKey": "--form-bgd-color",
+        "data": "#FAFAFA"
+      },
+      {
+        "title": "Estimate title text color",
+        "description": "Estimate form title color",
+        "rootKey": "--estimate-title-color",
+        "data": "#285E17"
+      },
+      {
+        "title": "Estimate submit background",
+        "description": "Estimate form submit button background color",
+        "rootKey": "--estimate-submit-bgd-color",
+        "data": "#F18332"
+      },
+      {
+        "title": "Estimate submit text",
+        "description": "Estimate form submit button text color",
+        "rootKey": "--estimate-submit-text-color",
+        "data": "#FBFBFB"
+      }
+    ]
+  },
+  {
+    "title": "Contact Header",
+    "description": "Contact header --root values CSS",
+    "global": true,
+    "_type": "contactHeader",
+    "styles": [
+      {
+        "title": "Contact header background color",
+        "description": "Contact header background color (every page top)",
+        "rootKey": "--contact-header-bgd-color",
+        "data": "#B6DDC9"
+      },
+      {
+        "title": "Contact header business name color",
+        "description": "Contact header business name color (every page top)",
+        "rootKey": "--contact-header-biz-name-color",
+        "data": "#A2571D"
+      },
+      {
+        "title": "Contact header phone icon color",
+        "description": "Contact header phone color (every page top)",
+        "rootKey": "--contact-header-phone-icon--color",
+        "data": "#A2571D"
+      },
+      {
+        "title": "Contact header phone text color",
+        "description": "Contact header phone color (every page top)",
+        "rootKey": "--contact-header-phone-color",
+        "data": "#A2571D"
+      },
+      {
+        "title": "Contact header email icon color",
+        "description": "Contact header email icon color (every page top)",
+        "rootKey": "--contact-header-email-icon-color",
+        "data": "#A2571D"
+      },
+      {
+        "title": "Contact header email text color",
+        "description": "Contact header email color (every page top)",
+        "rootKey": "--contact-header-email-color",
+        "data": "#A2571D"
+      }
+    ]
+  },
+  {
+    "title": "Global data",
+    "description": "Global --root values for CSS",
+    "global": true,
+    "_type": "global",
+    "styles": [
+      {
+        "title": "Success color",
+        "description": "success color",
+        "rootKey": "--sucsess-color",
+        "data": "#498449"
+      },
+      {
+        "title": "Error color",
+        "description": "Error color",
+        "rootKey": "--error-color",
+        "data": "#de8282"
+      },
+      {
+        "title": "Shodow color",
+        "description": "Shadow color",
+        "rootKey": "--shadow",
+        "data": "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset"
+      },
+      {
+        "title": "Message back button text",
+        "description": "Message back button text color",
+        "rootKey": "--message-back-btn-color",
+        "data": "#FBFBFB"
+      }
+    ]
+  },
+  {
+    "title": "Home Page",
+    "description": "home data",
+    "imageUrl": "http://localhost:3000/defaultPageImages/home.png",
+    "global": false,
+    "_type": "homePage",
+    "homeTitle": "our services",
+    "styles": [
+      {
+        "title": "Home background color",
+        "description": "Home page background color",
+        "rootKey": "--home-bgd-color",
+        "data": "#FAFAFA"
+      },
+      {
+        "title": "Home title color",
+        "description": "Home page title color",
+        "rootKey": "--home-title",
+        "data": "#474747"
+      },
+      {
+        "title": "Home service name color",
+        "description": "Home page service name color",
+        "rootKey": "--home-service-name",
+        "data": "#474747"
+      },
+      {
+        "title": "Home box color",
+        "description": "Home box color (business info box)",
+        "rootKey": "--home-accent-box",
+        "data": "#254817"
+      },
+      {
+        "title": "Home business info text color",
+        "description": "Home box text color (business info box text)",
+        "rootKey": "--home-business-font-color",
+        "data": "#FAFAFA"
+      }
+    ]
+  },
+  {
+    "title": "About Page",
+    "description": "about data",
+    "imageUrl": "http://localhost:3000/defaultPageImages/about.png",
+    "global": false,
+    "_type": "aboutPage",
+    "aboutTitle": "Our story",
+    "aboutDesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "styles": [
+      {
+        "title": "About page background color",
+        "description": "About Page background color",
+        "rootKey": "--about-bgd-color",
+        "data": "#FAFAFA"
+      },
+      {
+        "title": "About page title color",
+        "description": "About Page title text color",
+        "rootKey": "--about-title-color",
+        "data": "#354935"
+      },
+      {
+        "title": "About page description color",
+        "description": "About Page description text color",
+        "rootKey": "--about-desc-color",
+        "data": "#313131"
+      }
+    ]
+  },
+  {
+    "title": "Service Page",
+    "description": "service page data",
+    "global": false,
+    "imageUrl": "",
+    "_type": "servicePage",
+    "servicePageTitle": "Our services",
+    "styles": [
+      {
+        "title": "Service page background color",
+        "description": "Service Page background color",
+        "rootKey": "--service-bgd-color",
+        "data": "#FFFCF4"
+      },
+      {
+        "title": "Service page title color",
+        "description": "Service Page title text color",
+        "rootKey": "--service-title-color",
+        "data": "#354935"
+      },
+      {
+        "title": "Service text box color",
+        "description": "Service Page text box color",
+        "rootKey": "--service-text-box--bgd-color",
+        "data": "#E6DECB"
+      },
+      {
+        "title": "Service name color",
+        "description": "Service Page service name color",
+        "rootKey": "--service-name-color",
+        "data": "#E7E7E7"
+      },
+      {
+        "title": "Service name background color",
+        "description": "Service Page service name background color",
+        "rootKey": "--service-name--bgd-color",
+        "data": "#B0AB9F"
+      },
+      {
+        "title": "Service description text color",
+        "description": "Service Page service description text color",
+        "rootKey": "--service-desc-color",
+        "data": "#313131"
+      }
+    ]
+  },
+  {
+    "title": "Contact Page",
+    "description": "Contact page root values for CSS",
+    "imageUrl": "http://localhost:3000/defaultPageImages/contact.png",
+    "global": false,
+    "_type": "contactPage",
+    "contactTitle": "contact us",
+    "styles": [
+      {
+        "title": "Contact page background color",
+        "description": "Contact page background color",
+        "rootKey": "--contact-bgd-color",
+        "data": "#FFFCF4"
+      },
+      {
+        "title": "Contact page title color",
+        "description": "Contact page title color",
+        "rootKey": "--contact-title-color",
+        "data": "#EAEAEA"
+      }
+    ]
+  },
+  {
+    "title": "Services",
+    "description": "List of services",
+    "global": false,
+    "_type": "service",
+    "list": [
+      {
+        "serviceName": "Outdoor",
+        "serviceDesc": "write about your service description here",
+        "serviceImg": "http://localhost:3000/defaultPageImages/outdoor.png"
+      },
+      {
+        "serviceName": "Pool installation",
+        "serviceDesc": "write about your service description here",
+        "serviceImg": "http://localhost:3000/defaultPageImages/pool.png"
+      },
+      {
+        "serviceName": "Home Renovation",
+        "serviceDesc": "write about your service description here",
+        "serviceImg": "http://localhost:3000/defaultPageImages/renovation.png"
+      }
+    ]
+  }
+]

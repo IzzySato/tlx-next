@@ -1,0 +1,37 @@
+.serviceIcons {
+  font-size: 1.5rem;
+  margin-right: 3%;
+}
+
+.serviceName {
+  color: var(--home-service-name);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 3%;
+  line-height: 1.8;
+}
+
+.serviceDescriptionP {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  padding: 2% 4%;
+}
+
+.serviceUlList .serviceWithoutImgLi {
+  margin-bottom: 2rem;
+}
+
+.serviceNoDescription .serviceDescriptionP {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+
+  .serviceIcons {
+    font-size: 1.2rem;
+  }
+
+  .serviceName {
+    font-size: 1.2rem;
+  }
+}
