@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
   const fetcher = (url) => fetch(url).then((res) => res.json());
   const url = '/api/businessInfo';
   const { data, error } = useSWR(url, fetcher);
-  if (error) return <div>Failed to load. Check sanity studio Business infomation section. Must to add a business infomation</div>
+  if (error) return <div>Failed to load</div>
   if (!data) return <div>Loading...</div>
 
   return (
