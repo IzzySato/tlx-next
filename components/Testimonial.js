@@ -41,7 +41,7 @@ const Testimonial = ( { data: { testimonialData } }) => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} componentContainer`}>
 
       { /* desktop view desplay three testimonial */ }
 

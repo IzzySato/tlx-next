@@ -40,7 +40,7 @@ const Contact = ({ contactPageData,
     services]);
 
   return (
-    <div className={`${styles.container}`}>
+    <div className={`${styles.container} pageWrapper`}>
       {
         image &&
         <div className={styles.contactImg}

@@ -41,7 +41,7 @@ const Service = ({
   ]);
 
   return (
-    <div className={`${styles.container} wrapper`}>
+    <div className={`${styles.container} wrapper pageWrapper`}>
       <div className={`${styles.serviceDiv}`}>
         <h1 className={styles.serviceTitle}>{serviceTitle}</h1>
         {/* service list with image */}

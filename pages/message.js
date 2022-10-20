@@ -16,7 +16,7 @@ useEffect(() => {
 }, [businessInfo]);
 
   return (
-    <div className={styles.wrapper} >
+    <div className={`${styles.wrapper} pageWrapper`} >
       <div className={(status) ? `${styles.msgDiv} ${styles.success}` : `${styles.msgDiv}  ${styles.error}`}>
         <div className={styles.imgContainer}>
         {

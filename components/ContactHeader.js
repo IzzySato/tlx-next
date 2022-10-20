@@ -14,7 +14,7 @@ const ContactHeader = ({data: { businessInfo }}) => {
   }, [businessInfo]);
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} componentContainer`}>
       <h2 className={`${styles.info} ${styles.companyName}`}>{name}</h2>
       <div className={styles.info}>
         <a className={styles.infoAnchor} href={`tel:${phone}`}>

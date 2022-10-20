@@ -31,9 +31,14 @@
   color: var(--credential-color);
 }
 
-.credentials p {
+.credentials li {
   font-size: 1.2rem;
   margin-bottom: 0.8rem;
+}
+
+.credentials span {
+  font-size: 0.6rem;
+  margin-right: 0.8rem;
 }
 
 /* style1 (logo included business name) */
@@ -87,6 +92,9 @@
 }
 
 @media screen and (max-width: 1200px) {
+  .footer {
+    padding: 5%;
+  }
 
   .gridDiv {
     grid-template-columns: 30% auto;

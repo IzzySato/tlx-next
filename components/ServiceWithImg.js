@@ -53,7 +53,7 @@ const ServiceWithImg = ({ data: { services, isImageSlide } }) => {
   )
 
   return (
-    <div>
+    <div className={`${styles.container}`}>
       <div className={(isImageSlide) ? `${styles.serviceDiv} ${styles.slideContainer}`
         : `${styles.serviceDiv} ${styles.serviceGrid}`}>
         <ul className={(serviceData.length % 2 === 0) ?

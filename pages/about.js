@@ -44,7 +44,7 @@ const About = ({
   ]);
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} pageWrapper`}>
     {
       image &&
         <div className={styles.aboutImg}

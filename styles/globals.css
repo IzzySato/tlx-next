@@ -69,6 +69,15 @@ button:hover {
   padding: 13% 5% 0% 5%;
 }
 
+.pageWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.componentContainer {
+  padding: 3% 2%;
+}
+
 .keen-slider__slide {
   transition: all 0.5s ease-out;
 }

@@ -18,7 +18,7 @@
 }
 
 .serviceDiv {
-  margin: 6% 5%;
+  margin: 5%;
 }
 
 .serviceTitle {
@@ -31,6 +31,10 @@
   padding: 2% 0% 15% 0;
   width: 60%;
   margin: 0 auto;
+}
+
+.testimonialDiv {
+  padding: 5%;
 }
 
 

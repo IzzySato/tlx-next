@@ -53,7 +53,7 @@ const Home = ({
   ]);
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} pageWrapper`}>
       {
         homeImage &&
         <div className={styles.imgContainer}

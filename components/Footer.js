@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { urlFor } from '../sanityConfig';
 import { AiFillPhone, AiOutlineMail } from 'react-icons/ai';
 import { IoLocationSharp } from 'react-icons/io5';
+import { BsCircleFill } from 'react-icons/bs';
 
 const Footer = ({data: { businessInfo }}) => {
   const [name, setName] = useState('');
@@ -29,7 +30,7 @@ const Footer = ({data: { businessInfo }}) => {
   }, [businessInfo]);
 
   return (
-    <footer className={`${styles.footer} ${styles[logoStyle]}`}>
+    <footer className={`${styles.footer} ${styles[logoStyle]} componentContainer`}>
       <div className={styles.gridDiv}>
         <div className={styles.logoNameDiv}>
           <div className={styles.nameDiv}>
@@ -87,13 +88,15 @@ const Footer = ({data: { businessInfo }}) => {
           </div>
         </div>
           <div className={styles.credentials}>
-            <p>Certified Red Seal Electricians</p>
-            <p>Contractor Licence LEL0203972</p>
-            <p>Worksafe BC 200362807</p>
-            <p>BC Hydro Alliance member 1048</p>
-            <p>GST 752221671</p>
-            <p>Bonded</p>
-            <p>Insured</p>
+            <ul>
+              <li><span><BsCircleFill/></span>Certified Red Seal Electricians</li>
+              <li><span><BsCircleFill/></span>Contractor Licence LEL0203972</li>
+              <li><span><BsCircleFill/></span>Worksafe BC 200362807</li>
+              <li><span><BsCircleFill/></span>BC Hydro Alliance member 1048</li>
+              <li><span><BsCircleFill/></span>GST 752221671</li>
+              <li><span><BsCircleFill/></span>Bonded</li>
+              <li><span><BsCircleFill/></span>Insured</li>
+            </ul>
         </div>
       </div>
     </footer>

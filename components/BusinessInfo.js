@@ -29,7 +29,7 @@ const BusinessInfo = ({ data }) => {
   }, [data]);
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} componentContainer`}>
         <div className={`${styles.contactDiv} ${styles[logoStyle]}`}>
           <div className={styles.logoNameDiv}>
             <div className={`${styles.info} ${styles.businessNameDiv}`}>

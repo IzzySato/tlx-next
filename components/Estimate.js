@@ -64,7 +64,7 @@ const Estimate = ({ data: { services, estimateData } }) => {
   };
 
   return (
-    <div className={`${styles.container} ${styles[formStyle]}`}>
+    <div className={`${styles.container} ${styles[formStyle]} componentContainer`}>
       <h3 className={styles.estimateTitle}>{title}</h3>
       <form>
         <fieldset>
