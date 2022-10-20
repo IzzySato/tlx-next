@@ -1,6 +1,6 @@
 .menuIcon {
   display: block;
-  padding: 6% 3%;
+  padding: 3%;
 }
 
 .nav {
@@ -38,7 +38,7 @@
 }
 
 .li:last-child {
-  margin-bottom: 10%;
+  margin-bottom: 7%;
 }
 
 .li:hover {

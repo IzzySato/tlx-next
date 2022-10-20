@@ -1,5 +1,7 @@
-.container {
-  position: relative;
+.containerDiv {
+  display: grid;
+  grid-template-columns: 1% auto 1%;
+  grid-gap: 5%;
 }
 
 .mobile {
@@ -7,30 +9,16 @@
 }
 
 .leftIcon, .rightIcon {
-  position: absolute;
-  top: 50%;
-  font-size: 1.7rem;
-  background-color: black;
-  color: white;
-  padding: 0.5rem;
-  display: flex;
-  align-self: center;
-  justify-items: center;
-}
-
-.leftIcon {
-  left: 0;
-}
-
-.rightIcon {
-  right: 0;
+  font-size: 2rem;
+  color: grey;
+  background-color: transparent;
+  padding: 2%;
 }
 
 .gridContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 2rem;
-  padding: 0 6%;
 }
 
 .list {
@@ -64,15 +52,11 @@
   }
 
   .mobile {
-    display: block;
+    display: grid;
+    justify-items: center;
   }
 
   .gridContainer {
     display: block;
-  }
-
-  .list {
-    width: 90%;
-    margin: 0 auto 3% auto;
   }
 }

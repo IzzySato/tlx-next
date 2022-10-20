@@ -25,6 +25,7 @@ const Home = ({
   const [estimateC, setEstimateC] = useState(false);
   const [serviceC, setServiceC] = useState(false);
   const [testimonialC, setTestimonialC] = useState(false);
+  const [businessBoxStyle, setBusinessBoxStyle] = useState('');
 
   useEffect(() => {
     const {
@@ -34,9 +35,11 @@ const Home = ({
       estimateComponent,
       serviceComponent,
       testimonialComponent,
-      imageSlide
+      imageSlide,
+      businessInfoBoxStyle
     } = homeData[0];
 
+    setBusinessBoxStyle(businessInfoBoxStyle);
     setHomeImage(homeMainImg);
     setTitle(homeTitle);
     globalCSSInit(globalData);
@@ -60,7 +63,9 @@ const Home = ({
           style={{ backgroundImage: `url(${urlFor(homeImage)})` }}>
         </div>
       }
-      <div className={styles.businessInfoContainer}>
+      <div className={(homeImage) ?
+        `${styles.withImg} ${styles.businessInfoContainer} ${styles[businessBoxStyle]}`
+        : `${styles.noImg} ${styles.businessInfoContainer} ${styles[businessBoxStyle]}`}>
         <BusinessInfo data={{ businessInfo: businessInfo[0] }} />
       </div>
       {

@@ -63,7 +63,7 @@ const ServiceWithImg = ({ data: { services, isImageSlide } }) => {
             serviceData &&
             serviceData.map((s, index) =>
               <li className={
-                (s.withDescription) ? `` : `${styles.serviceNoDescription}`
+                (s.withDescription) ? `${styles.lists}` : `${styles.serviceNoDescription} ${styles.lists}`
               }
                 key={index}
               >

@@ -1,9 +1,9 @@
 import styles from '../styles/components/Testimonial.module.css';
 import React, { useState, useEffect } from 'react';
 import { GiRoundStar } from 'react-icons/gi';
-import { AiOutlineCaretLeft, AiOutlineCaretRight} from 'react-icons/ai';
+import { BiRightArrow, BiLeftArrow } from 'react-icons/bi';
 
-const Testimonial = ( { data: { testimonialData } }) => {
+const Testimonial = ({ data: { testimonialData } }) => {
   const [currentDeskTopNum, setCurrentDeskTopNum] = useState(0);
   const [currentMobileNum, setCurrentMobileNum] = useState(0);
   const [selectedDeskTopData, setSelectedDeskTopData] = useState([]);
@@ -13,7 +13,7 @@ const Testimonial = ( { data: { testimonialData } }) => {
   const displayNumMobile = 1;
 
   const getSelectedData = (currentNum, displayNum) =>
-    testimonialData.filter((d, index) => (index >= currentNum && index < (currentNum+displayNum)))
+    testimonialData.filter((d, index) => (index >= currentNum && index < (currentNum + displayNum)))
 
   useEffect(() => {
     setSelectedDeskTopData(getSelectedData(0, displayNumDeskTop));
@@ -25,9 +25,9 @@ const Testimonial = ( { data: { testimonialData } }) => {
     displayNum,
     setCurrentNum,
     setSelectedData) => {
-      const newCurrentNum = currentNum-displayNum;
-      setCurrentNum(newCurrentNum);
-      setSelectedData(getSelectedData(newCurrentNum, displayNum));
+    const newCurrentNum = currentNum - displayNum;
+    setCurrentNum(newCurrentNum);
+    setSelectedData(getSelectedData(newCurrentNum, displayNum));
   };
 
   const nextTestimonial = (
@@ -35,136 +35,136 @@ const Testimonial = ( { data: { testimonialData } }) => {
     displayNum,
     setCurrentNum,
     setSelectedData) => {
-      const newCurrentNum = currentNum+displayNum;
-      setCurrentNum(newCurrentNum);
-      setSelectedData(getSelectedData(newCurrentNum, displayNum));
+    const newCurrentNum = currentNum + displayNum;
+    setCurrentNum(newCurrentNum);
+    setSelectedData(getSelectedData(newCurrentNum, displayNum));
   };
 
   return (
     <div className={`${styles.container} componentContainer`}>
 
-      { /* desktop view desplay three testimonial */ }
+      { /* desktop view desplay three testimonial */}
 
-      <div className={styles.desktop}>
+      <div className={`${styles.desktop} ${styles.containerDiv}`}>
         {
-          (currentDeskTopNum-displayNumDeskTop >= 0 ) ?
-            <button className={styles.leftIcon} 
-            onClick={() => prevTestimonial(
-              currentDeskTopNum,
-              displayNumDeskTop,
-              setCurrentDeskTopNum,
-              setSelectedDeskTopData
-            )}>
-              <AiOutlineCaretLeft />
-            </button> : ''
+          (currentDeskTopNum - displayNumDeskTop >= 0) ?
+            <button className={styles.leftIcon}
+              onClick={() => prevTestimonial(
+                currentDeskTopNum,
+                displayNumDeskTop,
+                setCurrentDeskTopNum,
+                setSelectedDeskTopData
+              )}>
+              <BiLeftArrow />
+            </button> : <span></span>
         }
-      <ul className={`${styles.gridContainer}`}>
+        <ul className={`${styles.gridContainer}`}>
+          {
+            selectedDeskTopData &&
+            selectedDeskTopData.map((data, index) => (
+              <li key={index} className={styles.list}>
+                <div className={styles.stars}>
+                  <span>
+                    <GiRoundStar />
+                  </span>
+                  <span>
+                    <GiRoundStar />
+                  </span>
+                  <span>
+                    <GiRoundStar />
+                  </span>
+                  <span>
+                    <GiRoundStar />
+                  </span>
+                  <span>
+                    <GiRoundStar />
+                  </span>
+                </div>
+                <p className={styles.comments}>
+                  &quot; {data.comments} &quot;
+                </p>
+                <p className={styles.name}>
+                  - {data.name}
+                </p>
+              </li>
+            ))
+          }
+        </ul>
         {
-          selectedDeskTopData &&
-          selectedDeskTopData.map((data, index) => (
-            <li key={index} className={styles.list}>
-              <div className={styles.stars}>
-                <span>
-                  <GiRoundStar />
-                </span>
-                <span>
-                  <GiRoundStar />
-                </span>
-                <span>
-                  <GiRoundStar />
-                </span>
-                <span>
-                  <GiRoundStar />
-                </span>
-                <span>
-                  <GiRoundStar />
-                </span>
-              </div>
-              <p className={styles.comments}>
-                &quot; { data.comments} &quot;
-              </p>
-              <p className={styles.name}>
-                - { data.name }
-              </p>
-            </li>
-          ))
+          (testimonialData.length > currentDeskTopNum + displayNumDeskTop) ?
+            <button className={styles.rightIcon}
+              onClick={() => nextTestimonial(
+                currentDeskTopNum,
+                displayNumDeskTop,
+                setCurrentDeskTopNum,
+                setSelectedDeskTopData
+              )}>
+              <BiRightArrow />
+            </button> : <span></span>
         }
-      </ul>
-      {
-        (testimonialData.length > currentDeskTopNum+displayNumDeskTop) ?
-        <button className={styles.rightIcon}
-          onClick={() => nextTestimonial(
-            currentDeskTopNum,
-            displayNumDeskTop,
-            setCurrentDeskTopNum,
-            setSelectedDeskTopData
-          )}>
-          <AiOutlineCaretRight />
-        </button> : ''
-      }
       </div>
 
-      { /* mobile view desplay one testimonial */ }
+      { /* mobile view desplay one testimonial */}
 
-      <div className={styles.mobile}>
-      {
-        (currentMobileNum-displayNumMobile >= 0 ) ?
-          <button className={styles.leftIcon}
-            onClick={() => prevTestimonial(
-              currentMobileNum,
-              displayNumMobile,
-              setCurrentMobileNum,
-              setMobileSelectedData
-            )}>
-            <AiOutlineCaretLeft />
-          </button> : ''
-      }
-      <ul className={`${styles.gridContainer}`}>
+      <div className={`${styles.mobile} ${styles.containerDiv}`}>
         {
-          mobileSelectedData &&
-          mobileSelectedData.map((data, index) => (
-            <li key={index} className={styles.list}>
-              <div className={styles.stars}>
-                <span>
-                  <GiRoundStar />
-                </span>
-                <span>
-                  <GiRoundStar />
-                </span>
-                <span>
-                  <GiRoundStar />
-                </span>
-                <span>
-                  <GiRoundStar />
-                </span>
-                <span>
-                  <GiRoundStar />
-                </span>
-              </div>
-              <p className={styles.comments}>
-                &quot; { data.comments} &quot;
-              </p>
-              <p className={styles.name}>
-                - { data.name }
-              </p>
-            </li>
-          ))
+          (currentMobileNum - displayNumMobile >= 0) ?
+            <button className={styles.leftIcon}
+              onClick={() => prevTestimonial(
+                currentMobileNum,
+                displayNumMobile,
+                setCurrentMobileNum,
+                setMobileSelectedData
+              )}>
+              <BiLeftArrow />
+            </button> : <span></span>
         }
-      </ul>
-      {
-        (testimonialData.length > currentMobileNum+displayNumMobile) ?
-        <button className={styles.rightIcon}
-          onClick={() => nextTestimonial(
-            currentMobileNum,
-            displayNumMobile,
-            setCurrentMobileNum,
-            setMobileSelectedData
-          )}>
-          <AiOutlineCaretRight />
-        </button> : ''
-      }
+        <ul className={`${styles.gridContainer}`}>
+          {
+            mobileSelectedData &&
+            mobileSelectedData.map((data, index) => (
+              <li key={index} className={styles.list}>
+                <div className={styles.stars}>
+                  <span>
+                    <GiRoundStar />
+                  </span>
+                  <span>
+                    <GiRoundStar />
+                  </span>
+                  <span>
+                    <GiRoundStar />
+                  </span>
+                  <span>
+                    <GiRoundStar />
+                  </span>
+                  <span>
+                    <GiRoundStar />
+                  </span>
+                </div>
+                <p className={styles.comments}>
+                  &quot; {data.comments} &quot;
+                </p>
+                <p className={styles.name}>
+                  - {data.name}
+                </p>
+              </li>
+            ))
+          }
+        </ul>
+        {
+          (testimonialData.length > currentMobileNum + displayNumMobile) ?
+            <button className={styles.rightIcon}
+              onClick={() => nextTestimonial(
+                currentMobileNum,
+                displayNumMobile,
+                setCurrentMobileNum,
+                setMobileSelectedData
+              )}>
+              <BiRightArrow />
+            </button> : <span></span>
+        }
       </div>
-      
+
     </div>
   )
 };
