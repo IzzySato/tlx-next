@@ -28,7 +28,6 @@
 
 .title {
   color: var(--about-title-color);
-  text-transform: uppercase;
   font-size: 3.5rem;
 }
 
@@ -39,6 +38,16 @@
   color: var(--about-desc-color);
 }
 
+.estimateDiv {
+  padding: 2% 0% 6% 0;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.testimonialDiv {
+  margin: 4% 5%;
+}
+
 @media screen and (max-width: 990px) {
   .container {
     padding-top: 10%;
@@ -46,7 +55,7 @@
 
   .titleDiv {
     width: 80%;
-    top: 27%;
+    top: 22%;
   }
 
   .title {
@@ -61,5 +70,9 @@
 
   .titleDiv {
     width: 100%;
+  }
+
+  .estimateDiv {
+    width: 90%;
   }
 }

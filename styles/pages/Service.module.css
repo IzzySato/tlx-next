@@ -4,20 +4,15 @@
   padding: 15% 5% 10% 5%;
 }
 
+.serviceDiv {
+  padding: 0 20%;
+}
+
 .serviceTitle {
   color: var(--service-title-color);
   margin-bottom: 5%;
   font-size: 2.7rem;
   text-align: center;
-  text-transform: uppercase;
-}
-
-.serviceWithImgDiv {
-  margin-bottom: 13%;
-}
-
-.serviceListDiv {
-  margin-bottom: 13%;
 }
 
 .estimateDiv {
@@ -26,8 +21,12 @@
 }
 
 @media screen and (max-width: 900px) {
+  .container {
+    padding: 29% 5% 10% 5%;
+  }
+
   .serviceDiv {
-    padding-top: 10%;
+    padding: 0 10%;
   }
 
   .estimateDiv {
