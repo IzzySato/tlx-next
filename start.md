@@ -17,6 +17,7 @@
 
 2. Google login
   * create a business
+  * OAuth --> remember to add test user!
   * https://console.cloud.google.com
   * API & Services -> Credentials -> Create API key
   * Create ClientID and get Client ID and secret

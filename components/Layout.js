@@ -13,24 +13,24 @@ const Layout = ({ children }) => {
 
   return (
     <>
-    <Head>
-      <meta
-      name="description"
-      content={data.businessInfo[0].businessDescription} />
-       <title>{data.businessInfo[0].businessName}</title>
-       <link rel="shortcut icon" href="/images/favicon.ico" />
-       <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
-       <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png"/>
-          <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png"/>
-     </Head>
-     <ContactHeader data={{businessInfo: data.businessInfo[0]}}/>
-     <Nav/>
-     <div>
-      <main>
-        {children}
-      </main>
-      <Footer data={{businessInfo: data.businessInfo[0]}}/>
-    </div>
+      <Head>
+        <meta
+          name="description"
+          content={data.businessInfo[0].businessDescription} />
+        <title>{data.businessInfo[0].businessName}</title>
+        <link rel="shortcut icon" href="/images/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+      </Head>
+      <ContactHeader data={{ businessInfo: data.businessInfo[0] }} />
+      <Nav />
+      <div>
+        <main>
+          {children}
+        </main>
+        <Footer data={{ businessInfo: data.businessInfo[0] }} />
+      </div>
     </>
   )
 };

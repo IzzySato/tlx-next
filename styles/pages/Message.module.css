@@ -18,20 +18,27 @@
   margin: 0 0 5% 0;
   font-size: 1.4rem;
   line-height: 1.8;
-  color: var(--font-white-color);
+  font-weight: 400;
+  color: var(--msg-font-color);
 }
 
-.success {
-  background-color: var(--sucsess-color);
-}
-
-.error {
-  background-color: var(--error-color);
+.success, .error {
+  box-shadow: var(--msg-font-color) 0px 3px 8px;
 }
 
 .msgBtn {
-  text-decoration: underline;
+  font-weight: 200;
+  font-size: 1rem;
+}
+
+.msgBtn a {
+  border-bottom: 1px solid var(--message-back-btn-color);
+  padding-bottom: 1%;
   color: var(--message-back-btn-color);
+}
+
+.msgBtn:hover a {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 990px) {

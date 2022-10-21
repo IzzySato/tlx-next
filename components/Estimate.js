@@ -5,6 +5,7 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import { sendEmmailClient } from '../pages/api/email/emailClient';
 import { recaptchaClient } from '../pages/api/recaptcha';
 import Select from 'react-select';
+import { insertCustomerClient } from '../pages/api/customer/customerClient';
 
 const Estimate = ({ data: { services, estimateData } }) => {
   const [title, setTitle] = useState('');
@@ -13,7 +14,7 @@ const Estimate = ({ data: { services, estimateData } }) => {
   const [email, setEmail] = useState('');
   const [tel, setTel] = useState('');
   const [address, setAddress] = useState('');
-  const [service, setService] = useState('');
+  const [service, setService] = useState([]);
   const [comments, setComments] = useState('');
   const [readyToSendEmail, setReadyToSendEmail] = useState(false);
   const [serviceOption, setServiceOption] = useState([]);
@@ -36,8 +37,7 @@ const Estimate = ({ data: { services, estimateData } }) => {
                             .map(({ serviceName }) => 
                                ({ value : serviceName, label: serviceName }));
     setServiceOption(options);
-  }, [
-  ]);
+  }, []);
 
   const checkRecaptcha = async () => {
     const recaptchaValue = recaptchaRef.current.getValue();
@@ -49,6 +49,7 @@ const Estimate = ({ data: { services, estimateData } }) => {
 
   const submit = async (e) => {
     e.preventDefault();
+    const selectedServices = service.map(s => s.value);
     if (readyToSendEmail) {
       const res = await sendEmmailClient(
         fName,
@@ -56,8 +57,17 @@ const Estimate = ({ data: { services, estimateData } }) => {
         email,
         tel,
         address,
-        service,
+        selectedServices,
         comments
+        );
+        await insertCustomerClient(
+          fName,
+          lName,
+          email,
+          tel,
+          address,
+          comments,
+          selectedServices
         );
         router.push({ pathname: '/message', query: res });
     } else return;
@@ -139,8 +149,7 @@ const Estimate = ({ data: { services, estimateData } }) => {
           <Select isMulti
                   options= { serviceOption }
                   id="select"
-                  onChange={(e) =>
-                    setService(e.value)}/>
+                  onChange={(e) => setService(e)}/>
         </fieldset>
         <fieldset className={styles.commentFieldset}>
           <label className={`${styles.label} ${styles.commentLabel}`}

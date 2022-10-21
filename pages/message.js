@@ -25,8 +25,8 @@ useEffect(() => {
             loader={() => urlFor(logo)}
             src='logo.svg'
             alt='logo'
-            width={200}
-            height={200}
+            width={640}
+            height={258}
           />
           }
         </div>
