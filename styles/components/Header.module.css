@@ -1,0 +1,5 @@
+.container {
+  background-color: var(--bgd-color);
+  height: 20%;
+  width: 100%;
+}

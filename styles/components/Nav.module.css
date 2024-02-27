@@ -6,11 +6,9 @@
 .nav {
   position: absolute;
   background-color: var(--nav-bgd-color);
-  color: var(--nav-text-color);
   width: 100%;
   z-index: 100;
   margin-bottom: 5%;
-  padding-left: 3%;
 }
 
 .menuLine {
@@ -33,12 +31,13 @@
 }
 
 .li {
-  padding: 4%;
   font-size: 1.3rem;
+  color: var(--nav-text-color);
+  padding: 1% 0 1% 3%;
 }
 
-.li:last-child {
-  margin-bottom: 7%;
+.li:first-child {
+  margin-top: 2%;
 }
 
 .li:hover {
@@ -46,12 +45,7 @@
   color: var(--nav-text-color);
 }
 
-.li:hover a {
-  color: var(--nav-text-color);
-}
-
 @media screen and (min-width: 990px) {
-
   .nav {
     padding-left: 12%;
   }
@@ -63,12 +57,14 @@
   .ul {
     display: block !important;
   }
+
+  .li:first-child {
+    margin-top: 0;
+  }
   
   .li {
-    margin-right: 2%;
-    display: inline-flex;
     padding: 1%;
-    margin: 2% 3%;
+    display: inline-flex;
   }
   
   .li:last-child {
@@ -76,11 +72,7 @@
   }
 
   .li:hover {
-    padding-bottom: 5px;
-    background-color: var(--nav-bgd-color);
-  }
-
-  .li:hover a {
-    background-color: var(--nav-bgd-color);
+    background-color: var(--nav-text-color);
+    color: var(--nav-bgd-color);
   }
 }

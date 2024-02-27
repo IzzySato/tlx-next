@@ -20,6 +20,7 @@ const Service = ({
   const [estimateC, setEstimateC] = useState(false);
   const [testimonialC, setTestimonialC] = useState(false);
   const [isImageSlide, setIsImageSlide] = useState(false);
+  const [isServiceImages, setIsServiceImages] = useState(false);
 
   useEffect(() => {
     const {
@@ -40,14 +41,21 @@ const Service = ({
     services
   ]);
 
+  useEffect(() => {
+    const serviceWithImages = services.filter(({ withImage }) => withImage);
+    setIsServiceImages(serviceWithImages.length > 0);
+  }, [services]);
+
   return (
     <div className={`${styles.container} wrapper pageWrapper`}>
       <div className={`${styles.serviceDiv}`}>
         <h1 className={styles.serviceTitle}>{serviceTitle}</h1>
         {/* service list with image */}
-        <div className={styles.serviceWithImgDiv}>
+        {
+          isServiceImages && <div className={styles.serviceWithImgDiv}>
           <ServiceWithImg data={{ services, isImageSlide }} />
         </div>
+        }
         {/* service list without image */}
         <div className={styles.serviceListDiv}>
           <ServiceList data={{ services }} />

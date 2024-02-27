@@ -3,13 +3,15 @@ import useSWR from 'swr'
 import Nav from './Nav';
 import Footer from './Footer';
 import ContactHeader from './ContactHeader';
+import Loading from './Loading';
+import Header from './Header';
 
 const Layout = ({ children }) => {
   const fetcher = (url) => fetch(url).then((res) => res.json());
   const url = '/api/businessInfo';
   const { data, error } = useSWR(url, fetcher);
   if (error) return <div>Failed to load</div>
-  if (!data) return <div>Loading...</div>
+  if (!data) return <Loading />
 
   return (
     <>
@@ -24,6 +26,7 @@ const Layout = ({ children }) => {
         <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
       </Head>
       <ContactHeader data={{ businessInfo: data.businessInfo[0] }} />
+      <Header data={{ businessInfo: data.businessInfo[0] }} />
       <Nav />
       <div>
         <main>
