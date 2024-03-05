@@ -74,8 +74,6 @@ export const getServerSideProps = async () => {
   const fontData = await sanityFetch('importFont');
   const estimateData = await sanityFetch('estimate');
   const testimonialData = await sanityFetch('testimonial');
-    // insert the data only first time build the app
-  await defaultDataToSanity(contactPageData, 'contactPage');
   return { props: { 
     contactPageData,
     businessInfo,

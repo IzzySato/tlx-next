@@ -1,5 +1,6 @@
 .container {
-  padding: 5% 0 10% 0;
+  padding: 0 0 10% 0;
+  position: relative;
   background-color: var(--contact-bgd-color);
   color: var(--contact-default-font-color);
 }
@@ -18,7 +19,6 @@
   top: 0;
   left: 0;
   right: 0;
-  margin: 3% auto 0 auto;
   text-align: center;
   padding: 10% 5% 0 5%;
   font-size: 4rem;

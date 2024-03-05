@@ -1,7 +1,6 @@
 import styles from '../styles/components/BusinessInfo.module.css';
 import React, { useState, useEffect } from 'react';
 import { urlFor } from '../sanityConfig';
-import Image from 'next/image';
 import { AiFillPhone, AiOutlineMail } from 'react-icons/ai';
 import { IoLocationSharp } from 'react-icons/io5';
 
@@ -40,14 +39,7 @@ const BusinessInfo = ({ data }) => {
             <div className={`${styles.info} ${styles.logoDiv}`}>
               {
                 logo &&
-                <img className={styles.logoImg} src={urlFor(logo).url()} />
-                // <Image
-                //   loader={() => urlFor(logo)}
-                //   src='logo.svg'
-                //   alt='logo'
-                //   width={200}
-                //   height={150}
-                // />
+                <img alt='business logo' className={styles.logoImg} src={urlFor(logo).url()} />
               }
             </div>
           </div>

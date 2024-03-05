@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import { insertStyles } from '../Util/pageUtil';
 import { sanityFetch } from '../lib/sanity/sanityFetch';
 import { getAboutData } from '../lib/sanity/data/aboutSanity';
-import { defaultDataToSanity } from '../lib/sanity/build/pageBuildSanity';
 import Testimonial from '../components/Testimonial';
 import Estimate from '../components/Estimate';
 
@@ -52,8 +51,8 @@ const About = ({
         </div>
     }
       <div className={`${styles.titleDiv} ${styles[box]}`}>
-        <h1 className={styles.title}>{ title }</h1>
-        <p className={styles.desc}>{ description }</p>
+        <h1 className={`${styles.title} headerTitle`}>{ title }</h1>
+        <p className={`${styles.desc} paragraph`}>{ description }</p>
       </div>
       {
           (testimonialC) ?
@@ -77,8 +76,6 @@ export const getServerSideProps = async () => {
   const services = await sanityFetch('service');
   const estimateData = await sanityFetch('estimate');
   const testimonialData = await sanityFetch('testimonial');
-  // insert the data only first time loaded this page
-  await defaultDataToSanity(aboutData, 'aboutPage');
   return { props: { 
     aboutData,
     fontData,

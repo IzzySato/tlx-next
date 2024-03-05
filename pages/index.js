@@ -3,8 +3,6 @@ import React, { useState, useEffect } from 'react';
 import Estimate from '../components/Estimate';
 import { sanityFetch } from '../lib/sanity/sanityFetch';
 import { getHomeData } from '../lib/sanity/data/homeSanity';
-import { getGlobalData, globalCSSInit, insertStyles } from '../Util/pageUtil';
-import { defaultDataToSanity } from '../lib/sanity/build/pageBuildSanity';
 import Testimonial from '../components/Testimonial';
 import ServiceWithImg from '../components/ServiceWithImg';
 import ServiceList from '../components/ServiceList';
@@ -14,7 +12,6 @@ const Home = ({
   homeData,
   services,
   businessInfo,
-  globalData,
   estimateData,
   testimonialData,
 }) => {
@@ -30,7 +27,6 @@ const Home = ({
     const {
       homeMainImg,
       homeTitle,
-      relatedStyles,
       estimateComponent,
       serviceComponent,
       testimonialComponent,
@@ -38,13 +34,11 @@ const Home = ({
     } = homeData[0];
     setHomeImage(homeMainImg);
     setTitle(homeTitle);
-    globalCSSInit(globalData);
-    insertStyles(relatedStyles);
     setEstimateC(estimateComponent);
     setServiceC(serviceComponent);
     setTestimonialC(testimonialComponent);
     setIsImageSlide(imageSlide);
-  }, [homeData, businessInfo, globalData, estimateData]);
+  }, [homeData, businessInfo, estimateData]);
 
   useEffect(() => {
     const serviceWithImages = services.filter(({ withImage }) => withImage);
@@ -97,16 +91,11 @@ export const getServerSideProps = async () => {
   const businessInfo = await sanityFetch('info');
   const estimateData = await sanityFetch('estimate');
   const testimonialData = await sanityFetch('testimonial');
-  // insert the data only first time loaded this page
-  await defaultDataToSanity(homeData, 'homePage');
-  // add global data only once on landing page
-  const globalData = await getGlobalData();
   return {
     props: {
       homeData,
       services,
       businessInfo,
-      globalData,
       estimateData,
       testimonialData,
     },

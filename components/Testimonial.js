@@ -105,7 +105,6 @@ const Testimonial = ({ data: { testimonialData } }) => {
       </div>
 
       { /* mobile view desplay one testimonial */}
-
       <div className={`${styles.mobile} ${styles.containerDiv}`}>
         {
           (currentMobileNum - displayNumMobile >= 0) ?
@@ -164,7 +163,6 @@ const Testimonial = ({ data: { testimonialData } }) => {
             </button> : <span></span>
         }
       </div>
-
     </div>
   )
 };

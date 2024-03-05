@@ -26,14 +26,14 @@ const Layout = ({ children }) => {
         <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
       </Head>
       <ContactHeader data={{ businessInfo: data.businessInfo[0] }} />
-      <Header data={{ businessInfo: data.businessInfo[0] }} />
-      <Nav />
-      <div>
-        <main>
-          {children}
-        </main>
-        <Footer data={{ businessInfo: data.businessInfo[0] }} />
+      <div className='headerNavContainer'>
+        <Header data={{ businessInfo: data.businessInfo[0] }} />
+        <Nav />
       </div>
+      <main>
+        {children}
+      </main>
+      <Footer data={{ businessInfo: data.businessInfo[0] }} />
     </>
   )
 };

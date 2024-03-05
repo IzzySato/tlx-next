@@ -1,12 +1,12 @@
 .container {
   background-color: var(--about-bgd-color);
+  position: relative;
   color: var(--about-default-font-color);
-  padding-top: 6%;
   height: 100%;
 }
 
 .aboutImg {
-  height: 700px;
+  height: 500px;
   opacity: 0.4;
   background-repeat: no-repeat;
   background-size: cover;
@@ -16,7 +16,7 @@
   padding: 5% 7%;
   position: absolute;
   width: 60%;
-  top: 27%;
+  top: 0;
   left: 0;
   right: 0;
   margin: auto;
@@ -26,16 +26,8 @@
   background-color: var(--about-box-color);
 }
 
-.title {
-  color: var(--about-title-color);
-  font-size: 3.5rem;
-}
-
 .desc {
-  line-height: 34px;
-  font-size: 1.3rem;
   margin-top: 5%;
-  color: var(--about-desc-color);
 }
 
 .estimateDiv {
@@ -49,13 +41,8 @@
 }
 
 @media screen and (max-width: 990px) {
-  .container {
-    padding-top: 10%;
-  }
-
   .titleDiv {
     width: 80%;
-    top: 22%;
   }
 
   .title {
@@ -65,7 +52,7 @@
 
 @media screen and (max-width: 900px) {
   .aboutImg {
-    height: 650px;
+    height: 310px;
   }
 
   .titleDiv {

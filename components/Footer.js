@@ -1,6 +1,5 @@
 import styles from '../styles/components/Footer.module.css';
 import React, { useState, useEffect } from 'react';
-// import Image from 'next/image';
 import { urlFor } from '../sanityConfig';
 import { AiFillPhone, AiOutlineMail } from 'react-icons/ai';
 import { IoLocationSharp } from 'react-icons/io5';
@@ -42,14 +41,7 @@ const Footer = ({data: { businessInfo }}) => {
           <div className={`${styles.logoDiv} ${styles.logoDiv}`}>
             {
               logo &&
-              <img className={styles.logoImg} src={urlFor(logo).url()} />
-              // <Image
-              //   loader={() => urlFor(logo)}
-              //   src='logo.svg'
-              //   alt='logo'
-              //   width={150}
-              //   height={120}
-              // />
+              <img alt='business logo' className={styles.logoImg} src={urlFor(logo).url()} />
             }
           </div>
         </div>

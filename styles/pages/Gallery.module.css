@@ -1,0 +1,53 @@
+.container {
+  margin-bottom: 10%;
+}
+
+.galleryContainer:not(:last-child)  {
+  margin-bottom: 20%;
+}
+
+.galleryImages {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2%;
+}
+
+.galleryImage {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 1% 2%;
+  }
+
+  .galleryContainer:not(:last-child)  {
+    margin-bottom: 30%;
+  }
+
+  .galleryImages {
+    grid-template-columns: 1fr 1fr;
+    gap: 2%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .galleryImages {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .galleryContainer:not(:last-child)  {
+    margin-bottom: 10%;
+  }
+
+  .galleryImage {
+    height: 300px;
+    width: 100%;
+    margin-bottom: 3%;
+  }
+}
