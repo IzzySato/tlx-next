@@ -1,13 +1,15 @@
 import Link from 'next/link';
 import styles from '../styles/components/Nav.module.css';
 import React, { useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 const Nav = () => {
   const [navToggle, setNavToggle] = useState('none');
+  const pathname = usePathname();
 
   const mobileToggleNav = () => {
     navToggle === 'none' ? setNavToggle('block') : setNavToggle('none');
-  }
+  };
 
   const navData = [
     {
@@ -37,6 +39,10 @@ const Nav = () => {
     },
   ];
 
+  const isSelected = (routeName) => {
+    return pathname === routeName;
+  };
+
   return (
     // hamburger menu for mobile
     <nav className={`${styles.nav} navContainer`}>
@@ -47,11 +53,17 @@ const Nav = () => {
       </div>
       {/* menu list */}
       <ul className={styles.ul} style={{ display: navToggle }}>
-        {navData.map((nav, index) => (
-          <li key={index} className={styles.li}>
-            <Link href={nav.routeName}>{nav.title}</Link>
-          </li>
-        ))}
+        {navData.map((nav, index) =>
+          isSelected(nav.routeName) ? (
+            <li key={index} className={`${styles.li} ${styles.isSelected}`}>
+              {nav.title}
+            </li>
+          ) : (
+            <li key={index} className={`${styles.li} ${styles.notSelected}`}>
+              <Link href={nav.routeName}>{nav.title}</Link>
+            </li>
+          )
+        )}
       </ul>
     </nav>
   );

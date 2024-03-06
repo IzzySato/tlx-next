@@ -7,27 +7,14 @@
 }
 
 .serviceDiv {
-  margin: 5%;
+  margin: 5% 0 0 5%;
 }
 
 .serviceTitle {
-  margin: 0% 0 1% 0;
   color: var(--home-title);
   font-size: 2.3rem;
 }
 
-.estimateDiv {
-  padding: 2% 0% 15% 0;
-  width: 60%;
-  margin: 0 auto;
-}
-
 .testimonialDiv {
-  padding: 5%;
-}
-
-@media screen and (max-width: 1000px) {
-  .estimateDiv {
-    width: 90%;
-  }
+  padding: 1%;
 }

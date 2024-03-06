@@ -1,8 +1,0 @@
-{
-  "base": "http://localhost/",
-  "urls": [
-  "about",
-  "service",
-  "gallery",
-  "contact"
-]}

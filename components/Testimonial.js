@@ -13,7 +13,7 @@ const Testimonial = ({ data: { testimonialData } }) => {
   const displayNumMobile = 1;
 
   const getSelectedData = (currentNum, displayNum) =>
-    testimonialData.filter((d, index) => (index >= currentNum && index < (currentNum + displayNum)))
+    testimonialData?.filter((d, index) => (index >= currentNum && index < (currentNum + displayNum)))
 
   useEffect(() => {
     setSelectedDeskTopData(getSelectedData(0, displayNumDeskTop));
@@ -91,7 +91,7 @@ const Testimonial = ({ data: { testimonialData } }) => {
           }
         </ul>
         {
-          (testimonialData.length > currentDeskTopNum + displayNumDeskTop) ?
+          (testimonialData && testimonialData.length > currentDeskTopNum + displayNumDeskTop) ?
             <button className={styles.rightIcon}
               onClick={() => nextTestimonial(
                 currentDeskTopNum,
@@ -151,7 +151,7 @@ const Testimonial = ({ data: { testimonialData } }) => {
           }
         </ul>
         {
-          (testimonialData.length > currentMobileNum + displayNumMobile) ?
+          (testimonialData && testimonialData.length > currentMobileNum + displayNumMobile) ?
             <button className={styles.rightIcon}
               onClick={() => nextTestimonial(
                 currentMobileNum,
