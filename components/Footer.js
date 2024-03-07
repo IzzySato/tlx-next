@@ -91,6 +91,7 @@ const Footer = ({data: { businessInfo }}) => {
             </ul>
         </div>
       </div>
+      <p className='mt-1'>&copy; Copyright TLX Electric - All Rights Reserved</p>
     </footer>
   )
 };

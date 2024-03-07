@@ -15,12 +15,12 @@ const Gallery = ({ gallery }) => {
       {
         galleryData && galleryData.map(({ title, images}) => 
           <div key={title} className={styles.galleryContainer}>
-           <h2 className={`${styles.title} subHeader mb-1`}>{title}</h2>
-           <div className={styles.galleryImages}>
-            {
-              images.map((image) => <div className={styles.galleryImage} key={urlFor(image)} style={{ backgroundImage: `url(${urlFor(image)})`}}></div>)
-            }
-           </div>
+           <h2 className={`subHeader mb-1`}>{title}</h2>
+            <div className={styles.galleryImages}>
+              {
+                images.map((image) => <img className={styles.galleryImage} key={urlFor(image)} alt='image' src={urlFor(image)}/>)
+              }
+            </div>
           </div>
         )
       }

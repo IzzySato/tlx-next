@@ -6,12 +6,14 @@ import { getServicePageData } from '../lib/sanity/data/serviceSanity';
 import Testimonial from '../components/Testimonial';
 import ServiceWithImg from '../components/ServiceWithImg';
 import ServiceList from '../components/ServiceList';
+import SupplierNetwork from '../components/SupplierNetwork';
 
 const Service = ({
   servicePageData,
   services,
   estimateData,
   testimonialData,
+  supplierNetwork,
 }) => {
   const [serviceTitle, setServiceTitle] = useState('');
   const [isEstimate, setIsEstimate] = useState(false);
@@ -46,19 +48,20 @@ const Service = ({
           <ServiceList data={{ services }} />
         </div>
       </div>
-      {isTestimonial ? (
+      {supplierNetwork && (
+        <div>
+          <SupplierNetwork data={{ supplierNetwork }} />
+        </div>
+      )}
+      {isTestimonial && (
         <div className={styles.testimonialDiv}>
           <Testimonial data={{ testimonialData }} />
         </div>
-      ) : (
-        ''
       )}
-      {isEstimate ? (
+      {isEstimate && (
         <div className={styles.estimateDiv}>
           <Estimate data={{ services, estimateData }} />
         </div>
-      ) : (
-        ''
       )}
     </div>
   );
@@ -69,12 +72,14 @@ export const getServerSideProps = async () => {
   const services = await sanityFetch('service');
   const estimateData = await sanityFetch('estimate');
   const testimonialData = await sanityFetch('testimonial');
+  const supplierNetwork = await sanityFetch('supplierNetwork');
   return {
     props: {
       servicePageData,
       services,
       estimateData,
       testimonialData,
+      supplierNetwork,
     },
   };
 };

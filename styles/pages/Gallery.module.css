@@ -3,21 +3,21 @@
 }
 
 .galleryContainer:not(:last-child)  {
-  margin-bottom: 20%;
+  margin-bottom: 10%;
 }
 
 .galleryImages {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
   gap: 2%;
+  overflow: auto;
 }
 
 .galleryImage {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 400px;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 1200px) {
