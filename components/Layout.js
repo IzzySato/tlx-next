@@ -5,7 +5,7 @@ import ContactHeader from './ContactHeader';
 import Loading from './Loading';
 import Header from './Header';
 import { useEffect, useState } from 'react';
-import { globalCSSInit } from '../Util/pageUtil';
+import { globalCSSInit } from '../Util/styleValues';
 
 const Layout = ({ children }) => {
   const [businessData, setBusinessData] = useState([]);
@@ -54,10 +54,12 @@ const Layout = ({ children }) => {
               href="/images/favicon-16x16.png"
             />
           </Head>
-          <ContactHeader data={{ businessInfo: businessData[0] }} />
           <div className="headerNavContainer">
+            <div className="fixedHeader">
+              <ContactHeader data={{ businessInfo: businessData[0] }} />
+              <Nav />
+            </div>
             <Header data={{ businessInfo: businessData[0] }} />
-            <Nav />
           </div>
           <main>{children}</main>
           <Footer data={{ businessInfo: businessData[0] }} />

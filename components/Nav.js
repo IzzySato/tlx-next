@@ -18,11 +18,6 @@ const Nav = () => {
       title: 'HOME',
     },
     {
-      id: 'about',
-      routeName: '/about',
-      title: 'ABOUT US',
-    },
-    {
       id: 'service',
       routeName: '/service',
       title: 'SERVICES',
@@ -31,6 +26,11 @@ const Nav = () => {
       id: 'gallery',
       routeName: '/gallery',
       title: 'GALLERY',
+    },
+    {
+      id: 'about',
+      routeName: '/about',
+      title: 'ABOUT US',
     },
     {
       id: 'contact',

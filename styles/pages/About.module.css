@@ -40,6 +40,10 @@
   padding: 4% 5%;
 }
 
+.teamDiv {
+  padding: 0 5%;
+}
+
 @media screen and (max-width: 990px) {
   .titleDiv {
     width: 80%;
@@ -52,7 +56,7 @@
 
 @media screen and (max-width: 900px) {
   .aboutImg {
-    height: 310px;
+    height: 510px;
   }
 
   .titleDiv {

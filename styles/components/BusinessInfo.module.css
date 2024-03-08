@@ -2,6 +2,9 @@
   display: grid;
   grid-template-columns: 30% auto;
   grid-gap: 10%;
+  padding-top: 5%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .logoNameDiv {
@@ -59,18 +62,19 @@
   line-height: 1.2;
 }
 
+.streetBreak {
+  display: block;
+  margin-bottom: 1rem;
+}
+
 .icon {
   display: none;
 }
 
-@media screen and (max-width: 1700px) {
-  .cityBreak {
-    display: block;
-    margin-bottom: 1rem;
-  }
-}
-
 @media screen and (max-width: 990px) {
+  .contactDiv {
+    padding-top: 10%;
+  }
 
   .streetBreak {
     display: block;
@@ -104,6 +108,7 @@
   }
 
   .contactDiv {
+    margin-top: 16%;
     margin-left: 10%;
   }
 

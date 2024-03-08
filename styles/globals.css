@@ -65,17 +65,10 @@ button:hover {
   transition: all 0.5s ease-out;
 }
 
-.headerContainer {
-  grid-area: heading;
-}
-
-.navContainer {
-  grid-area: navBar;
-}
-
-.headerNavContainer {
-  display: grid;
-  grid-template-areas: 'heading' 'navBar';
+.fixedHeader {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
 }
 
 /* margins and paddings */
@@ -231,11 +224,12 @@ button:hover {
 }
 
 @media screen and (max-width: 990px) {
-  .headerNavContainer {
-    grid-template-areas: 'navBar' 'heading';
-  }
-
   .subHeader {
     font-size: 1.6rem;
+  }
+  .contactHeader {
+    position: absolute;
+    right: 0;
+    width: 80%;
   }
 }

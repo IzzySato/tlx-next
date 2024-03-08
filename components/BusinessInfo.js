@@ -72,7 +72,6 @@ const BusinessInfo = ({ data }) => {
                 <span className={`${styles.street} ${styles.address}`}>{street}</span>
                 <span className={styles.streetBreak}></span>
                 <span className={`${styles.city} ${styles.address}`}>{city}</span>
-                <span className={styles.cityBreak}></span>
                 <span className={`${styles.province} ${styles.address}`}>{province}</span>
                 <span className={`${styles.country} ${styles.address}`}>{country}</span>
               </div>
