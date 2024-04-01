@@ -80,12 +80,12 @@ const Testimonial = ({ data: { testimonialData } }) => {
                     <GiRoundStar />
                   </span>
                 </div>
-                <p className={styles.comments}>
+                <span className={styles.comments}>
                   &quot; {data.comments} &quot;
-                </p>
-                <p className={styles.name}>
+                </span>
+                <span className={styles.name}>
                   - {data.name}
-                </p>
+                </span>
               </li>
             ))
           }
@@ -140,12 +140,12 @@ const Testimonial = ({ data: { testimonialData } }) => {
                     <GiRoundStar />
                   </span>
                 </div>
-                <p className={styles.comments}>
+                <span className={styles.comments}>
                   &quot; {data.comments} &quot;
-                </p>
-                <p className={styles.name}>
+                </span>
+                <span className={styles.name}>
                   - {data.name}
-                </p>
+                </span>
               </li>
             ))
           }

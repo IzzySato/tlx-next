@@ -1,12 +1,11 @@
 import styles from '../styles/pages/About.module.css';
-import { urlFor } from '../sanityConfig';
 import React, { useState, useEffect } from 'react';
 import { sanityFetch } from '../lib/sanity/sanityFetch';
 import { getAboutData } from '../lib/sanity/data/aboutSanity';
 import Testimonial from '../components/Testimonial';
 import Estimate from '../components/Estimate';
-import Teammates from '../components/Teammates';
-import { textListUl } from '../Util/textFormat';
+import Teammates from '../components/about/Teammates';
+import AboutMain from '../components/about/Index';
 
 const About = ({ aboutData, estimateData, testimonialData, services, teammate }) => {
   const [title, setTitle] = useState('');
@@ -38,16 +37,7 @@ const About = ({ aboutData, estimateData, testimonialData, services, teammate })
 
   return (
     <div className={`${styles.container} pageWrapper pb-2`}>
-      {image && (
-        <div
-          className={styles.aboutImg}
-          style={{ backgroundImage: `url(${urlFor(image)})` }}
-        ></div>
-      )}
-      <div className={`${styles.titleDiv} ${styles[box]}`}>
-        <h1 className={`${styles.title} headerTitle`}>{title}</h1>
-        <p className={`${styles.desc} paragraph`}>{textListUl(description)}</p>
-      </div>
+      <AboutMain image={image} title={title} description={description} box={box}/>
       {isTestimonial && (
         <div className={styles.testimonialDiv}>
           <Testimonial data={{ testimonialData }} />

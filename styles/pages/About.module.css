@@ -5,29 +5,8 @@
   height: 100%;
 }
 
-.aboutImg {
-  height: 500px;
-  opacity: 0.4;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.titleDiv {
-  padding: 5% 7%;
-  position: absolute;
-  width: 60%;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-
 .withBox {
   background-color: var(--about-box-color);
-}
-
-.desc {
-  margin-top: 5%;
 }
 
 .estimateDiv {

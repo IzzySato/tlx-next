@@ -18,3 +18,13 @@
 .testimonialDiv {
   padding: 1%;
 }
+
+.mobileView {
+  display: none;
+}
+
+@media screen and (max-width: 990px) {
+  .mobileView {
+    display: block;
+  }
+}

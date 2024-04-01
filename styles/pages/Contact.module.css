@@ -14,13 +14,11 @@
 }
 
 .title {
-  padding-bottom: 2%;
   position: absolute;
-  top: 0;
+  top: 7%;
   left: 0;
   right: 0;
   text-align: center;
-  padding: 10% 5% 0 5%;
   font-size: 4rem;
   color: var(--contact-title-color);
 }
@@ -71,15 +69,10 @@
   .estimateDiv {
     width: 90%;
   }
-
-  .title {
-    padding-top: 13%;
-  }
 }
 
 @media screen and (max-width: 750px) {
   .title {
-    padding-top: 22%;
     font-size: 3rem;
   }
 }

@@ -1,0 +1,44 @@
+.aboutContainer {
+  position: relative;
+}
+
+.aboutImg {
+  height: 500px;
+  opacity: 0.4;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.titleDiv {
+  padding: 5% 7%;
+  position: absolute;
+  width: 60%;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.desc {
+  margin-top: 5%;
+}
+
+@media screen and (max-width: 990px) {
+  .titleDiv {
+    width: 80%;
+  }
+
+  .title {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .aboutImg {
+    height: 510px;
+  }
+
+  .titleDiv {
+    width: 100%;
+  }
+}

@@ -14,7 +14,7 @@ const ServiceList = ({ data: { services } }) => {
   ]);
 
   return (
-    <ul className={`${styles.serviceUlList} componentContainer`}>
+    <ul className={`${styles.serviceUlList}`}>
         {
           serviceData &&
           serviceData.map((s, index) =>
@@ -28,9 +28,9 @@ const ServiceList = ({ data: { services } }) => {
             <span className={styles.serviceName}>
                   { s.serviceName }
             </span>
-            <p className={styles.serviceDescriptionP}>
+            <span className={styles.serviceDescriptionP}>
                   { s.serviceDesc }
-            </p>
+            </span>
           </li>
           )
         }
